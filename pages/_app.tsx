@@ -1,6 +1,29 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { EmotionCache } from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import theme from "../styles/theme";
+import createEmotionCache from "../utility/createEmotionCache";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const clientSideEmotionCache = createEmotionCache();
+
+interface ExtendedAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+export default function App({
+  Component,
+  emotionCache = clientSideEmotionCache,
+  pageProps,
+}: ExtendedAppProps) {
+  return <CacheProvider value={emotionCache}>
+    <Head>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+    </Head>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </CacheProvider> 
 }
