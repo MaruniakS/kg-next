@@ -1,8 +1,17 @@
 import createEmotionServer from '@emotion/server/create-instance';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, {
+  DocumentProps,
+  Head,
+  Html,
+  Main,
+  NextScript
+} from 'next/document';
 import createEmotionCache from '../lib/createEmotionCache';
 import theme from '../lib/theme';
 
+interface MyDocumentProps extends DocumentProps {
+  emotionStyleTags: JSX.Element[];
+}
 export default class MyDocument extends Document {
   render() {
     return (
@@ -12,7 +21,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
-          {(this.props as any).emotionStyleTags}
+          {(this.props as MyDocumentProps).emotionStyleTags}
         </Head>
         <body>
           <Main />
@@ -57,9 +66,13 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) =>
+      enhanceApp: (App) =>
         function EnhanceApp(props) {
-          return <App emotionCache={cache} {...props} />;
+          const newProps = {
+            emotionCache: cache,
+            ...props,
+          };
+          return <App {...newProps} />;
         },
     });
 
