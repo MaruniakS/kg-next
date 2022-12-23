@@ -4,13 +4,20 @@
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
   ],
   "globals": {
     "React": "readonly"
   },
   "rules": {
-    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "no-unused-vars": [
+      1,
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "semi": ["error", "never"],
     "no-unreachable": ["error"],
     "no-unexpected-multiline": ["error"],
