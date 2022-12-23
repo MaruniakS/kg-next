@@ -1,5 +1,5 @@
-import { Card, CardContent, Container, Typography } from '@mui/material';
-import Head from 'next/head';
+import { Card, CardContent, Container, Typography } from '@mui/material'
+import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -13,10 +13,10 @@ export default function Home() {
       <Container maxWidth="lg">
         <Card>
           <CardContent>
-            <Typography variant='h1'>Home page</Typography>
+            <Typography variant="h1">Home page</Typography>
           </CardContent>
         </Card>
       </Container>
     </>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-import { EmotionCache } from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import createEmotionCache from '../lib/createEmotionCache';
-import theme from '../lib/theme';
+import { EmotionCache } from '@emotion/cache'
+import { CacheProvider } from '@emotion/react'
+import theme from '@lib/theme'
+import createEmotionCache from '@lib/theme/createEmotionCache'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
-const clientSideEmotionCache = createEmotionCache();
+const clientSideEmotionCache = createEmotionCache()
 
 interface ExtendedAppProps extends AppProps {
-  emotionCache?: EmotionCache;
+  emotionCache?: EmotionCache
 }
 
 export default function App({
@@ -27,5 +27,5 @@ export default function App({
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
-  );
+  )
 }

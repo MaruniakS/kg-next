@@ -1,17 +1,18 @@
-import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionServer from '@emotion/server/create-instance'
+import theme from '@lib/theme'
+import createEmotionCache from '@lib/theme/createEmotionCache'
 import Document, {
   DocumentProps,
   Head,
   Html,
   Main,
   NextScript
-} from 'next/document';
-import createEmotionCache from '../lib/createEmotionCache';
-import theme from '../lib/theme';
+} from 'next/document'
 
 interface MyDocumentProps extends DocumentProps {
-  emotionStyleTags: JSX.Element[];
+  emotionStyleTags: JSX.Element[]
 }
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -28,7 +29,7 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
@@ -57,12 +58,12 @@ MyDocument.getInitialProps = async (ctx) => {
   // 3. app.render
   // 4. page.render
 
-  const originalRenderPage = ctx.renderPage;
+  const originalRenderPage = ctx.renderPage
 
   // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
-  const cache = createEmotionCache();
-  const { extractCriticalToChunks } = createEmotionServer(cache);
+  const cache = createEmotionCache()
+  const { extractCriticalToChunks } = createEmotionServer(cache)
 
   ctx.renderPage = () =>
     originalRenderPage({
@@ -71,15 +72,15 @@ MyDocument.getInitialProps = async (ctx) => {
           const newProps = {
             emotionCache: cache,
             ...props,
-          };
-          return <App {...newProps} />;
+          }
+          return <App {...newProps} />
         },
-    });
+    })
 
-  const initialProps = await Document.getInitialProps(ctx);
+  const initialProps = await Document.getInitialProps(ctx)
   // This is important. It prevents Emotion to render invalid HTML.
   // See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
-  const emotionStyles = extractCriticalToChunks(initialProps.html);
+  const emotionStyles = extractCriticalToChunks(initialProps.html)
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
       data-emotion={`${style.key} ${style.ids.join(' ')}`}
@@ -87,10 +88,10 @@ MyDocument.getInitialProps = async (ctx) => {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
-  ));
+  ))
 
   return {
     ...initialProps,
     emotionStyleTags,
-  };
-};
+  }
+}
