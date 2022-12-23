@@ -6,7 +6,7 @@ import Document, {
   Head,
   Html,
   Main,
-  NextScript
+  NextScript,
 } from 'next/document'
 
 interface MyDocumentProps extends DocumentProps {
