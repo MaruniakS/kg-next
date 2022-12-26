@@ -1,7 +1,11 @@
 import { Card, CardContent, Container, Typography } from '@mui/material'
+import { GetStaticProps, NextPage } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 
-export default function Home() {
+const Home: NextPage = () => {
+  const { t } = useTranslation('common')
   return (
     <>
       <Head>
@@ -13,10 +17,22 @@ export default function Home() {
       <Container maxWidth="lg">
         <Card>
           <CardContent>
-            <Typography variant="h1">Home page</Typography>
+            <Typography variant="h1">{t('hello')}</Typography>
           </CardContent>
         </Card>
       </Container>
     </>
   )
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+      ])),
+    },
+  }
+}
+
+export default Home
