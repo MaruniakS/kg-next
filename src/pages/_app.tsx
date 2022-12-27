@@ -7,6 +7,8 @@ import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
+// import '@lib/theme/global.css'
+
 const clientSideEmotionCache = createEmotionCache()
 
 interface ExtendedAppProps extends AppProps {
