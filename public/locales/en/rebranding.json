@@ -8,14 +8,14 @@
     "technologyPlatforms": "technology platforms",
     "peopleInCompany": "people in company",
     "projectsFromReferrals": "projects from referrals",
-    "alreadyDoneProjects": "Already done projects",
-    "description": "And that's why we embrace rebrand, proudly manifesting Kindgeek's evolution with a new image, yet with the same core values of trust, transparency, social responsibility, and a sense of beauty.",
-    "values": {
-      "trust": "Trust",
-      "transperency": "Transperency",
-      "socialResponsibility": "Social responsibility",
-      "senseOfBeauty": "Sense of beauty"
-    }
+    "alreadyDoneProjects": "Already done projects"
+  },
+  "valuesSection": {
+    "heading": "And that's why we embrace rebrand, proudly manifesting Kindgeek's evolution with a new image, yet with the same core values of trust, transparency, social responsibility, and a sense of beauty.",
+    "trust": "Trust",
+    "transparency": "Transparency",
+    "responsibility": "Social responsibility",
+    "beauty": "Sense of beauty"
   },
   "logoSection": {
     "type": {

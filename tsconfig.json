@@ -19,7 +19,8 @@
       "@core/*": ["src/core/*"],
       "@components/*": ["src/components/*"],
       "@lib/*": ["src/lib/*"],
-      "@locales/*": ["public/locales/*"]
+      "@locales/*": ["public/locales/*"],
+      "@images/*": ["public/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

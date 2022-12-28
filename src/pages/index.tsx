@@ -1,9 +1,14 @@
-import colors from '@lib/theme/colors'
-import { Box, Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
+
+import ColorsSection from '@components/rebranding/ColorsSection'
+import LogotypeSection from '@components/rebranding/LogotypeSection'
+import MainSection from '@components/rebranding/MainSection'
+import NumbersSection from '@components/rebranding/NumbersSection'
+import ValuesSection from '@components/rebranding/ValuesSection'
 
 const Rebranding: NextPage = () => {
   const { t } = useTranslation('rebranding')
@@ -16,17 +21,11 @@ const Rebranding: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxWidth="xl">
-        <Box textAlign="center" mt={24}>
-          <Typography variant="h1">{t('title')}</Typography>
-          <Container maxWidth="md" sx={{ my: 8 }}>
-            <Typography variant="subtitle1">{t('subtitle1')}</Typography>
-            <Typography variant="subtitle1" mt={4}>{t('subtitle2')}</Typography>
-          </Container>
-          <Box height="650px" borderRadius={5} bgcolor={colors.neutralBlack}/>
-        </Box>
-        <Box textAlign="center" mt={18} mb={10}>
-          <Typography variant="h3" sx={{whiteSpace: "pre-wrap"}}>{t('inNumbersSection.heading')}</Typography>
-        </Box>
+        <MainSection />
+        <NumbersSection />
+        <ValuesSection />
+        <LogotypeSection />
+        <ColorsSection />
       </Container>
     </>
   )
@@ -35,9 +34,7 @@ const Rebranding: NextPage = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', [
-        'rebranding',
-      ])),
+      ...(await serverSideTranslations(locale ?? 'en', ['rebranding'])),
     },
   }
 }

@@ -1,5 +1,5 @@
 import colors from '@lib/theme/colors'
-import { createTheme } from '@mui/material'
+import { createTheme, responsiveFontSizes } from '@mui/material'
 import { Montserrat } from '@next/font/google'
 
 declare module '@mui/material/styles' {
@@ -15,7 +15,7 @@ export const montserrat = Montserrat({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 })
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
@@ -33,8 +33,8 @@ const theme = createTheme({
     h3: {
       fontWeight: 700,
     },
-    subtitle1: {
-      color: colors.grey,
+    subtitle2: {
+      fontWeight: 700,
     },
   },
   breakpoints: {
@@ -48,5 +48,7 @@ const theme = createTheme({
     },
   },
 })
+
+theme = responsiveFontSizes(theme)
 
 export default theme
