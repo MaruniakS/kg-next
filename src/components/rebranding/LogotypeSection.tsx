@@ -7,6 +7,7 @@ import logotypeSrc from '@images/rebranding/logotype.svg'
 import Image from 'next/image'
 import LogoCard from './LogoCard'
 
+import logoSturctureSrc from '@images/rebranding/logo-structure.png'
 import logo1Src from '@images/rebranding/logo1.svg'
 import logo2Src from '@images/rebranding/logo2.svg'
 import logo3Src from '@images/rebranding/logo3.svg'
@@ -14,7 +15,7 @@ import logo3Src from '@images/rebranding/logo3.svg'
 const LogotypeSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box mt={30} mb={10}>
+    <Box mt={30}>
       <Grid2 container spacing={2}>
         <Grid2 xs={12} md={3}>
           <Typography variant="h3">{t('logoSection.type.heading')}</Typography>
@@ -55,11 +56,14 @@ const LogotypeSection: React.FC = () => {
           imageSrc={logo3Src}
         />
       </Grid2>
-      <Grid2 container spacing={2} mt={20}>
+      <Grid2 container spacing={2} alignItems="center">
         <Grid2 xs={12} md={5}>
           <Typography variant="h3">{t('logoSection.structure.heading')}</Typography>
           <Typography variant="h5" color={colors.grey} mt={4}>{t('logoSection.structure.description1')}</Typography>
           <Typography variant="h5" color={colors.grey}>{t('logoSection.structure.description2')}</Typography>
+        </Grid2>
+        <Grid2 xs={12} md={6} mdOffset={1} textAlign="center">
+          <Image src={logoSturctureSrc} alt="logo structure"  height="500"/>
         </Grid2>
       </Grid2>
     </Box>
