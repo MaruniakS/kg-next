@@ -1,9 +1,10 @@
 import { Container } from '@mui/material'
-import { GetStaticProps, NextPage } from 'next'
+import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 
+import RebrandingLayout from '@components/layouts/rebranding'
 import BrandSection from '@components/rebranding/BrandSection'
 import ColorsSection from '@components/rebranding/ColorsSection'
 import LinksSection from '@components/rebranding/LinksSection'
@@ -11,8 +12,9 @@ import LogotypeSection from '@components/rebranding/LogotypeSection'
 import MainSection from '@components/rebranding/MainSection'
 import NumbersSection from '@components/rebranding/NumbersSection'
 import ValuesSection from '@components/rebranding/ValuesSection'
+import { ReactElement } from 'react'
 
-const Rebranding: NextPage = () => {
+const Rebranding = () => {
   const { t } = useTranslation('rebranding')
   return (
     <>
@@ -35,10 +37,17 @@ const Rebranding: NextPage = () => {
   )
 }
 
+Rebranding.getLayout = (page: ReactElement) => (
+  <RebrandingLayout>{page}</RebrandingLayout>
+)
+
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['rebranding'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'rebranding',
+        'navigation',
+      ])),
     },
   }
 }
