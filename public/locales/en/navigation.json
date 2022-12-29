@@ -1,8 +1,13 @@
 {
   "rebranding": {
-    "numbers": "Kindgeek in numbers",
-    "logotype": "Logotype",
-    "colors": "Colors",
-    "links": "Links"
+    "header": {
+      "numbers": "Kindgeek in numbers",
+      "logotype": "Logotype",
+      "colors": "Colors",
+      "links": "Links"
+    },
+    "footer": {
+      "powered": "Powered by Kindgeek {{year}}"
+    }
   }
 }

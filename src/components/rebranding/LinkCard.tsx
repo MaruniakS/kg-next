@@ -19,11 +19,11 @@ const LinkCard: React.FC<Props> = ({ label, link, imageSrc, ...props }) => {
       justifyContent="space-between"
       borderRadius={2}
       style={{ background: "linear-gradient(141.15deg, #1D1D1D 2.65%, #272727 65.18%, #212121 101.87%)"}}
-      p={3}
+      p={5}
       {...props}
     >
       <Stack direction="row" alignItems="center">
-        <Image src={imageSrc} alt={label} width={80} />
+        <Image src={imageSrc} alt={label} />
         <Typography variant="body1" fontWeight={700} textAlign="left" ml={4}>
           {label}
         </Typography>
