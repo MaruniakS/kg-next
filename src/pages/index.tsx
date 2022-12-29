@@ -4,7 +4,9 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 
+import BrandSection from '@components/rebranding/BrandSection'
 import ColorsSection from '@components/rebranding/ColorsSection'
+import LinksSection from '@components/rebranding/LinksSection'
 import LogotypeSection from '@components/rebranding/LogotypeSection'
 import MainSection from '@components/rebranding/MainSection'
 import NumbersSection from '@components/rebranding/NumbersSection'
@@ -20,12 +22,14 @@ const Rebranding: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxWidth="lg">
+      <Container>
         <MainSection />
         <NumbersSection />
         <ValuesSection />
         <LogotypeSection />
         <ColorsSection />
+        <LinksSection />
+        <BrandSection />
       </Container>
     </>
   )

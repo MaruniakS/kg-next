@@ -1,7 +1,7 @@
 import NumberCard from '@components/rebranding/NumberCard'
 import colors from '@lib/theme/colors'
 import { Box, Stack, Typography } from '@mui/material'
-import Grid2 from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Unstable_Grid2'
 import { useTranslation } from 'next-i18next'
 
 const NumbersSection: React.FC = () => {
@@ -11,8 +11,8 @@ const NumbersSection: React.FC = () => {
       <Typography variant="h3" maxWidth="lg" m="auto">
         {t('inNumbersSection.heading')}
       </Typography>
-      <Grid2 container spacing={2} mt={6}>
-        <Grid2 xs={6} md={4}>
+      <Grid container spacing={2} mt={6}>
+        <Grid xs={6} md={4}>
           <Stack spacing={2}>
             <NumberCard
               caption={t('inNumbersSection.yearsOfExperience')}
@@ -29,8 +29,8 @@ const NumbersSection: React.FC = () => {
               height={{ xs: 100, md: 130, lg: 200 }}
             />
           </Stack>
-        </Grid2>
-        <Grid2 xs={6} md={4}>
+        </Grid>
+        <Grid xs={6} md={4}>
           <Stack spacing={2}>
             <NumberCard
               caption={t('inNumbersSection.technologyPlatforms')}
@@ -47,8 +47,8 @@ const NumbersSection: React.FC = () => {
               height={{ xs: 150, md: 200, lg: 300 }}
             />
           </Stack>
-        </Grid2>
-        <Grid2 xs={12} md={4}>
+        </Grid>
+        <Grid xs={12} md={4}>
           <NumberCard
             caption={t('inNumbersSection.alreadyDoneProjects')}
             value="100+"
@@ -57,8 +57,8 @@ const NumbersSection: React.FC = () => {
             height={{ xs: 200, md: 346, lg: 516 }}
             valueProps={{ variant: 'h1' }}
           />
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
     </Box>
   )
 }

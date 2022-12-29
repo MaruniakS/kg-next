@@ -1,8 +1,7 @@
 import CenteredBox from '@core/components/CenteredBox'
-import Grid2 from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Unstable_Grid2'
 import Image from 'next/image'
 
-import colors from '@lib/theme/colors'
 import { Typography } from '@mui/material'
 
 type Props = {
@@ -11,14 +10,21 @@ type Props = {
 }
 
 const ValueCard: React.FC<Props> = ({ label, imageSrc }) => (
-  <Grid2 xs={6} md={3}>
-    <CenteredBox bgcolor={colors.neutralBlack} borderRadius={2} p={6}>
+  <Grid xs={6} md={3}>
+    <CenteredBox
+      style={{
+        background:
+          'linear-gradient(141.15deg, #1D1D1D 2.65%, #272727 65.18%, #212121 101.87%)',
+      }}
+      borderRadius={2}
+      p={6}
+    >
       <Image src={imageSrc} alt={label} />
       <Typography variant="subtitle2" mt={3}>
         {label}
       </Typography>
     </CenteredBox>
-  </Grid2>
+  </Grid>
 )
 
 export default ValueCard
