@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next'
 const MainSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box textAlign="center" mt={20}>
+    <Box textAlign="center" mt={{ xs: 10, md: 20}}>
       <Typography variant="h1">{t('title')}</Typography>
       <Container maxWidth="md" sx={{ my: 8 }}>
         <Typography variant="subtitle1" color={colors.grey}>

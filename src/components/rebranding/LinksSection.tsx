@@ -12,7 +12,7 @@ import smmIcon from '@images/rebranding/link-smm-icon.svg'
 const LinksSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box id="links" textAlign="center" pt={15} mt={10} mb={16}>
+    <Box id="links" textAlign="center" pt={15} mt={{ xs: 0, md: 10}} mb={16}>
       <Typography variant="h3">
         {t('linksSection.heading')}
       </Typography>

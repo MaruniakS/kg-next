@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 const NumbersSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box id="numbers" textAlign="center" mt={10} pt={15} mb={16}>
+    <Box id="numbers" textAlign="center" mt={{ md: 10 }} pt={15} mb={16}>
       <Typography variant="h3" maxWidth="lg" m="auto">
         {t('inNumbersSection.heading')}
       </Typography>
@@ -19,14 +19,14 @@ const NumbersSection: React.FC = () => {
               value="7"
               bgcolor={colors.secondary}
               color="black"
-              height={{ xs: 150, md: 200, lg: 300 }}
+              height={{ xs: 200, lg: 300 }}
             />
             <NumberCard
               caption={t('inNumbersSection.peopleInCompany')}
               value="200+"
               bgcolor={colors.primary10}
               color={colors.primary}
-              height={{ xs: 100, md: 130, lg: 200 }}
+              height={{ xs: 130, lg: 200 }}
             />
           </Stack>
         </Grid>
@@ -37,14 +37,14 @@ const NumbersSection: React.FC = () => {
               value="64"
               bgcolor={colors.secondary10}
               color={colors.secondary}
-              height={{ xs: 100, md: 130, lg: 200 }}
+              height={{ xs: 130, lg: 200 }}
             />
             <NumberCard
               caption={t('inNumbersSection.projectsFromReferrals')}
               value="70%"
               bgcolor={colors.cyan}
               color="black"
-              height={{ xs: 150, md: 200, lg: 300 }}
+              height={{ xs: 200, lg: 300 }}
             />
           </Stack>
         </Grid>

@@ -16,7 +16,7 @@ import logoIcon4 from '@images/rebranding/branding-logo4.svg'
 import colors from '@lib/theme/colors'
 
 const BrandSection: React.FC = () => (
-  <Box mt={10} mb={30}>
+  <Box mt={10} mb={{ xs: 15, md: 30}}>
     <Grid container>
       <Grid
         xs={12}

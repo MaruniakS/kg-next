@@ -20,7 +20,7 @@ const ColorBox: React.FC<BoxProps> = (props) => (
 const ColorsSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box id="colors" pt={15}>
+    <Box id="colors" pt={{ xs: 8, md: 15}}>
       <Grid container spacing={2}>
         <Grid xs={12}>
           <Typography variant="h3" width={{ xs: '100%', sm: '80%', xl: '60%' }}>

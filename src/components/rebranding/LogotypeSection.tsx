@@ -15,7 +15,7 @@ import logo3Src from '@images/rebranding/logo3.svg'
 const LogotypeSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box id="logotype" mt={15} pt={15}>
+    <Box id="logotype" mt={{ xs: 0, md: 15}} pt={15}>
       <Grid container spacing={2}>
         <Grid xs={12} md={3}>
           <Typography variant="h3">{t('logoSection.type.heading')}</Typography>
@@ -34,7 +34,7 @@ const LogotypeSection: React.FC = () => {
           />
         </Grid>
       </Grid>
-      <Grid container spacing={2} mt={16}>
+      <Grid container spacing={2} mt={{ xs: 8, md: 16}}>
         <Grid xs={12}>
           <Typography variant="h3" mb={8}>
             {t('logoSection.meaning.heading')}
@@ -56,7 +56,7 @@ const LogotypeSection: React.FC = () => {
           imageSrc={logo3Src}
         />
       </Grid>
-      <Grid container spacing={2} alignItems="center">
+      <Grid container spacing={2} alignItems="center" mt={{xs: 8, md: 0}}>
         <Grid xs={12} md={5}>
           <Typography variant="h3">
             {t('logoSection.structure.heading')}
