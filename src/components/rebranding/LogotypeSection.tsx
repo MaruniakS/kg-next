@@ -15,7 +15,7 @@ import logo3Src from '@images/rebranding/logo3.svg'
 const LogotypeSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box mt={30}>
+    <Box id="logotype" mt={15} pt={15}>
       <Grid container spacing={2}>
         <Grid xs={12} md={3}>
           <Typography variant="h3">{t('logoSection.type.heading')}</Typography>
@@ -36,9 +36,9 @@ const LogotypeSection: React.FC = () => {
       </Grid>
       <Grid container spacing={2} mt={16}>
         <Grid xs={12}>
-        <Typography variant="h3" mb={8}>
-          {t('logoSection.meaning.heading')}
-        </Typography>
+          <Typography variant="h3" mb={8}>
+            {t('logoSection.meaning.heading')}
+          </Typography>
         </Grid>
         <LogoCard
           label={t('logoSection.meaning.subheading1')}
@@ -58,12 +58,25 @@ const LogotypeSection: React.FC = () => {
       </Grid>
       <Grid container spacing={2} alignItems="center">
         <Grid xs={12} md={5}>
-          <Typography variant="h3">{t('logoSection.structure.heading')}</Typography>
-          <Typography variant="h5" color={colors.grey} mt={4}>{t('logoSection.structure.description1')}</Typography>
-          <Typography variant="h5" color={colors.grey}>{t('logoSection.structure.description2')}</Typography>
+          <Typography variant="h3">
+            {t('logoSection.structure.heading')}
+          </Typography>
+          <Typography variant="h5" color={colors.grey} mt={4}>
+            {t('logoSection.structure.description1')}
+          </Typography>
+          <Typography variant="h5" color={colors.grey}>
+            {t('logoSection.structure.description2')}
+          </Typography>
         </Grid>
         <Grid xs={12} md={6} mdOffset={1} textAlign="center">
-          <Image src={logoSturctureSrc} alt="logo structure"  height="500"/>
+          <Box
+            position="relative"
+            height={{ xs: '250px', md: '500px' }}
+            width={{ xs: '250px', md: '500px' }}
+            m="auto"
+          >
+            <Image src={logoSturctureSrc} alt="logo structure" fill />
+          </Box>
         </Grid>
       </Grid>
     </Box>

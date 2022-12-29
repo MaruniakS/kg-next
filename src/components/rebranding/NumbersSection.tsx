@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 const NumbersSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box textAlign="center" mt={18} mb={16}>
+    <Box id="numbers" textAlign="center" mt={10} pt={15} mb={16}>
       <Typography variant="h3" maxWidth="lg" m="auto">
         {t('inNumbersSection.heading')}
       </Typography>
