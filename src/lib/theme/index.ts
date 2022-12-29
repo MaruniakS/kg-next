@@ -1,19 +1,12 @@
+import { mont } from '@lib/fonts'
 import colors from '@lib/theme/colors'
 import { createTheme, responsiveFontSizes } from '@mui/material'
-import { Montserrat } from '@next/font/google'
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
     xxl: true
   }
 }
-
-export const montserrat = Montserrat({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['Helvetica', 'Arial', 'sans-serif'],
-})
 
 let theme = createTheme({
   palette: {
@@ -23,7 +16,7 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: montserrat.style.fontFamily,
+    fontFamily: mont.style.fontFamily,
     h1: {
       fontWeight: 700,
     },
