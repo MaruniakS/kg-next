@@ -20,7 +20,6 @@ interface I18nNamespaces {
 declare module 'i18next' {
   interface CustomTypeOptions {
     defaultNS: 'common'
-    ns: ['common', 'navigation', 'rebranding']
     resources: I18nNamespaces
   }
 }
