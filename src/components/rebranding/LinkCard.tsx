@@ -24,11 +24,11 @@ const LinkCard: React.FC<Props> = ({ label, link, imageSrc, ...props }) => {
     >
       <Stack direction="row" alignItems="center">
         <Image src={imageSrc} alt={label} />
-        <Typography variant="body1" fontWeight={700} textAlign="left" ml={4}>
+        <Typography variant="body1" fontWeight={500} textAlign="left" ml={4}>
           {label}
         </Typography>
       </Stack>
-      <Link href={link} fontWeight={700}>{t('linksSection.view')}</Link>
+      <Link href={link} fontWeight={500}>{t('linksSection.view')}</Link>
     </Stack>
   )
 }

@@ -2,23 +2,13 @@ import localFont from '@next/font/local'
 export const mont = localFont({
   src: [
     {
-      path: './Mont/MontRegular.otf',
-      weight: '400',
+      path: './Mont/MontThin.otf',
+      weight: '100',
       style: 'normal',
     },
     {
-      path: './Mont/MontRegularItalic.otf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '/Mont/MontBold.otf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '/Mont/MontBoldItalic.otf',
-      weight: '700',
+      path: './Mont/MontThinItalic.otf',
+      weight: '100',
       style: 'italic',
     },
     {
@@ -32,13 +22,33 @@ export const mont = localFont({
       style: 'italic',
     },
     {
-      path: './Mont/MontThin.otf',
-      weight: '100',
+      path: './Mont/MontRegular.otf',
+      weight: '400',
       style: 'normal',
     },
     {
-      path: './Mont/MontThinItalic.otf',
-      weight: '100',
+      path: './Mont/MontRegularItalic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './Mont/MontSemiBold.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './Mont/MontSemiBoldItalic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '/Mont/MontBold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '/Mont/MontBoldItalic.otf',
+      weight: '700',
       style: 'italic',
     },
   ],

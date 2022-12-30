@@ -7,11 +7,11 @@ const MainSection: React.FC = () => {
   return (
     <Box textAlign="center" mt={{ xs: 10, md: 20}}>
       <Typography variant="h1">{t('title')}</Typography>
-      <Container maxWidth="md" sx={{ my: 8 }}>
-        <Typography variant="subtitle1" color={colors.grey}>
+      <Container maxWidth="md" sx={{ mb: 8, mt: 4 }}>
+        <Typography variant="body1" color={colors.grey}>
           {t('subtitle1')}
         </Typography>
-        <Typography variant="subtitle1" color={colors.grey} mt={4}>
+        <Typography variant="body1" color={colors.grey} mt={4}>
           {t('subtitle2')}
         </Typography>
       </Container>
