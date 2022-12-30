@@ -15,16 +15,16 @@ import logo3Src from '@images/rebranding/logo3.svg'
 const LogotypeSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
-    <Box id="logotype" mt={{ xs: 0, md: 15}} pt={15}>
+    <Box id="logotype" mt={{ xs: 0, md: 10}} pt={15}>
       <Grid container spacing={2}>
         <Grid xs={12} md={3}>
           <Typography variant="h3">{t('logoSection.type.heading')}</Typography>
         </Grid>
         <Grid xs={12} mdOffset={1} md={8}>
-          <Typography variant="h5" color={colors.grey}>
+          <Typography variant="body1" color={colors.grey}>
             {t('logoSection.type.description1')}
           </Typography>
-          <Typography variant="h5" color={colors.grey} my={4}>
+          <Typography variant="body1" color={colors.grey} my={4}>
             {t('logoSection.type.description2')}
           </Typography>
           <Image
@@ -61,10 +61,10 @@ const LogotypeSection: React.FC = () => {
           <Typography variant="h3">
             {t('logoSection.structure.heading')}
           </Typography>
-          <Typography variant="h5" color={colors.grey} mt={4}>
+          <Typography variant="body1" color={colors.grey} mt={4}>
             {t('logoSection.structure.description1')}
           </Typography>
-          <Typography variant="h5" color={colors.grey}>
+          <Typography variant="body1" color={colors.grey}>
             {t('logoSection.structure.description2')}
           </Typography>
         </Grid>

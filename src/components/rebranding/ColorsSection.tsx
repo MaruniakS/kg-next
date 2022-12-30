@@ -26,10 +26,10 @@ const ColorsSection: React.FC = () => {
           <Typography variant="h3" width={{ xs: '100%', sm: '80%', xl: '60%' }}>
             {t('colorsSection.heading')}
           </Typography>
-          <Typography variant="h5" color={colors.grey} mt={6}>
+          <Typography variant="body1" color={colors.grey} mt={6}>
             {t('colorsSection.description1')}
           </Typography>
-          <Typography variant="h5" color={colors.grey} mb={6}>
+          <Typography variant="body1" color={colors.grey} mb={6}>
             {t('colorsSection.description2')}
           </Typography>
         </Grid>

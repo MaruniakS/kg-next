@@ -13,7 +13,7 @@ const ValuesSection: React.FC = () => {
   const { t } = useTranslation('rebranding')
   return (
     <Box textAlign="center">
-      <Typography variant="h5" color={colors.grey} maxWidth="lg" m="auto">
+      <Typography variant="h5" color={colors.grey} maxWidth="md" m="auto">
         {t('valuesSection.heading')}
       </Typography>
       <Grid container spacing={4} mt={8}>
