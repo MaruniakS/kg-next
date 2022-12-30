@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           direction={{ md: "row"}}
           justifyContent="space-between"
           alignItems="center"
-          height={{ md: 100}}
+          height={{ md: 60}}
           p={{ xs: 2, md: 0}}
         >
           <Link href="/">
