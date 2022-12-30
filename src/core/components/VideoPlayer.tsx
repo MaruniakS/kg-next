@@ -2,6 +2,7 @@ import { Box, styled } from '@mui/material'
 
 import { AdvancedVideo, lazyload } from '@cloudinary/react'
 import { Cloudinary } from '@cloudinary/url-gen'
+import { memo } from 'react'
 
 const StyledBox = styled(Box)({
     width: "100%",
@@ -12,13 +13,13 @@ const StyledBox = styled(Box)({
     }
 })
 
-const VideoPlayer = () => {
+const VideoPlayer: React.FC<{ videoName: string }> = ({ videoName }) => {
   const cld = new Cloudinary({
     cloud: {
       cloudName: 'dm1euuxsf',
     },
   })
-  const myVideo = cld.video('branding/kg1')
+  const myVideo = cld.video(videoName)
 
   return (
     <StyledBox height="100%" width="100%">
@@ -33,4 +34,4 @@ const VideoPlayer = () => {
   )
 }
 
-export default VideoPlayer
+export default memo(VideoPlayer)

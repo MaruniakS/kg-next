@@ -18,7 +18,7 @@ const MainSection: React.FC = () => {
         </Typography>
       </Container>
       <Box height={{ xs: "250px", md: "650px"}}>
-        <VideoPlayer />
+        <VideoPlayer videoName="branding/kg1" />
       </Box>
     </Box>
   )
