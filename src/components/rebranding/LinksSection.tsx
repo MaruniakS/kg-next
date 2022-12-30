@@ -18,19 +18,19 @@ const LinksSection: React.FC = () => {
       </Typography>
       <Grid container spacing={2} mt={6}>
         <Grid xs={12} md={6}>
-          <LinkCard label={t('linksSection.signature')} link="/" imageSrc={signatureIcon} />
+          <LinkCard label={t('linksSection.signature')} link="https://drive.google.com/drive/u/0/folders/1OFfj74vpnTHdzYQu2glDVy7Uktsx4oUF" imageSrc={signatureIcon} />
         </Grid>
         <Grid xs={12} md={6}>
-          <LinkCard label={t('linksSection.documents')} link="/" imageSrc={documentIcon} />
+          <LinkCard label={t('linksSection.documents')} link="https://drive.google.com/drive/folders/1-Mz9DDVuMsomHQcz4hBpK0AUcz59iI2a?usp=share_link" imageSrc={documentIcon} />
         </Grid>
         <Grid xs={12} md={6}>
-          <LinkCard label={t('linksSection.presentation')} link="/" imageSrc={presentationIcon} />
+          <LinkCard label={t('linksSection.presentation')} link="https://drive.google.com/drive/folders/1uqXcNzszyXzZl373ZXcBsGfiwE76RWXH?usp=share_link" imageSrc={presentationIcon} />
         </Grid>
         <Grid xs={12} md={6}>
-          <LinkCard label={t('linksSection.smm')} link="/" imageSrc={smmIcon} />
+          <LinkCard label={t('linksSection.smm')} link="https://drive.google.com/drive/u/0/folders/15WBUwv63Zts7PzY45vT-1Lno6t1lYRSH" imageSrc={smmIcon} />
         </Grid>
         <Grid xs={12} md={6} mdOffset={3}>
-          <LinkCard label={t('linksSection.logo')} link="/" imageSrc={logoIcon} />
+          <LinkCard label={t('linksSection.logo')} link="https://drive.google.com/drive/u/0/folders/12-O7_Dx61Om0XYvQFRosoVq0N39WXgsH" imageSrc={logoIcon} />
         </Grid>
       </Grid>
     </Box>
