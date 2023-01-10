@@ -39,17 +39,17 @@ const ColorsSection: React.FC = () => {
         <Grid xs={12} md={3} bgcolor={colors.primary}>
           <ColorBox color="black">
             <Typography variant="subtitle2">Pantone 3252 C</Typography>
-            <Typography variant="body2">RGB 0, 205, 199</Typography>
-            <Typography variant="body2">CMYK 71, 0, 32, 0</Typography>
+            <Typography variant="body2">RGB 0, 191, 191</Typography>
+            <Typography variant="body2">CMYK 75, 0, 0, 25</Typography>
             <Typography variant="body2">HEX #00BFBF</Typography>
           </ColorBox>
         </Grid>
         <Grid xs={12} md={3} bgcolor={colors.secondary}>
           <ColorBox color="black">
-            <Typography variant="subtitle2">Pantone 387 C</Typography>
-            <Typography variant="body2">RGB 240, 255, 73</Typography>
-            <Typography variant="body2">CMYK 16, 0, 87, 0</Typography>
-            <Typography variant="body2">HEX #F0FF3F</Typography>
+            <Typography variant="subtitle2">Pantone 7487 C</Typography>
+            <Typography variant="body2">RGB 158, 220, 87</Typography>
+            <Typography variant="body2">CMYK 24, 0, 52, 14</Typography>
+            <Typography variant="body2">HEX #9EDC57</Typography>
           </ColorBox>
         </Grid>
         <Grid
